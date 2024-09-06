@@ -1,0 +1,15 @@
+# appveyor.yml
+version: 1.0.{build}
+image: Ubuntu-22.04
+
+# Environment variables can be defined here if needed
+environment:
+  # Add any environment variables here
+  # EXAMPLE_VAR: "value"
+
+install:
+  # Install necessary packages
+  - ps: Install-Package -Name neofetch -Source apt
+
+build_script:
+  - neofetch
